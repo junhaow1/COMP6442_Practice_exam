@@ -1,7 +1,7 @@
 package comp1110.mse;
 
 /**
- * COMP1110 Mid-Semester Exam, Question 3
+ * COMP1110 Mid-Semester Exam, Question 4
  */
 public class Q4Cypher {
 
