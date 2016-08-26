@@ -47,7 +47,7 @@ public class Q3PlaneTest {
             p.resetSpeed(s);
             int t = p.timeToTravel(d);
             int rt = (60 * d) / s;
-            assertTrue("Expected time of "+r+"', but got '"+rt+"'", t == rt );
+            assertTrue("Expected time of '"+rt+"', but got '"+t+"'", t == rt );
         }
     }
 
