@@ -60,7 +60,7 @@ public class Q2InterleaveTest {
         }
         String cs = "";
         for (int i = 0; i < c.length; i++) {
-            cs += ((i!= 0) ? ", ": "")+"\""+r[i]+"\"";
+            cs += ((i!= 0) ? ", ": "")+"\""+c[i]+"\"";
         }
         if (c.length != r.length)
             assertTrue("Expected '{"+cs+"}' but got '{"+rs+"}'", false);
