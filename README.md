@@ -1,7 +1,8 @@
 # COMP1110/1140/1510/6710 Mid-Semester Exam
 
 This repo contains an IntelliJ project that you can use as
- part of the **sample** mid-semester exam.
+ part of the **sample** mid-semester exam.   You will find the sample mid-semester
+ exam [here](https://cs.anu.edu.au/courses/comp1110/mse/sample/exam.html).
 
  You will find three questions, each a separate Java class with
   FIXME notes indicating what you need to do.   Each question is
