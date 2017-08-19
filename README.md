@@ -1,4 +1,4 @@
-# COMP1110/1140/1510/6710 Sample Mid-Semester Exam
+# COMP1110/1140/6710 Sample Mid-Semester Exam
 
 This repo contains an IntelliJ project that you can use as
  part of the **sample** mid-semester exam.   You will find the sample mid-semester
