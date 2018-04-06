@@ -43,14 +43,24 @@ public class Q4CypherTest {
 
     @Test
     public void testEncodeSmall() {
-        Q4Cypher c = new Q4Cypher(2);
+        Q4Cypher two = new Q4Cypher(2);
         String input = "CAT";
-        String output = c.encode(input);
+        String output = two.encode(input);
         String ref = "EDX";
         assertTrue("encode(\""+input+"\") returned \""+output+"\", but expected \""+ref+"\"", ref.equals(output));
         input = "YOU";
-        output = c.encode(input);
+        output = two.encode(input);
         ref = " RY";
+        assertTrue("encode(\""+input+"\") returned \""+output+"\", but expected \""+ref+"\"", ref.equals(output));
+
+        Q4Cypher three = new Q4Cypher(3);
+        input = "DOG";
+        output = three.encode(input);
+        ref = "GSL";
+        assertTrue("encode(\""+input+"\") returned \""+output+"\", but expected \""+ref+"\"", ref.equals(output));
+        input = "THEY";
+        output = three.encode(input);
+        ref = "WLJ$";
         assertTrue("encode(\""+input+"\") returned \""+output+"\", but expected \""+ref+"\"", ref.equals(output));
     }
 

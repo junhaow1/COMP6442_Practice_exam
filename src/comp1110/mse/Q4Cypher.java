@@ -33,12 +33,17 @@ public class Q4Cypher {
      * in the sequence of 59 characters ' ' ... 'Z', where a shift beyond 'Z'
      * wraps around to the start of the sequence.
      *
-     * For example, if key was 2, the string "CAT" becomes "EDW", with the character
+     * For example, if key is 2, the string "CAT" becomes "EDX", with the character
      * 'C' rotated 2, 'A' rotated 3, and 'T' rotated 4.   The string "YOU" becomes
      * " RY", with 'Y' rotated 2 (wrapping around to ' '), 'R' rotated 3, and 'W'
      * rotated 4.
      *
-     * @param input THe string to be encoded
+     * If key is 2, the string "DOG" becomes "GSL", with the character
+     * 'D' rotated 3, 'O' rotated 4, and 'TG' rotated 5.   The string "THEM" becomes
+     * "WLJ$", with 'T' rotated 3, 'H' rotated 4, 'E' rotated 5, and Y rotated 6
+     * (wrapping around to '$').
+     *
+     * @param input a well-formed plain text string to be encoded
      * @return An encoded string
      */
     String encode(String input) {
