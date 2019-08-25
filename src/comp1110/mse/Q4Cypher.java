@@ -39,7 +39,7 @@ public class Q4Cypher {
      * rotated 4.
      *
      * If key is 2, the string "DOG" becomes "GSL", with the character
-     * 'D' rotated 3, 'O' rotated 4, and 'TG' rotated 5.   The string "THEM" becomes
+     * 'D' rotated 3, 'O' rotated 4, and 'TG' rotated 5.   The string "THEY" becomes
      * "WLJ$", with 'T' rotated 3, 'H' rotated 4, 'E' rotated 5, and Y rotated 6
      * (wrapping around to '$').
      *
