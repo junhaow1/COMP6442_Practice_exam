@@ -1,6 +1,7 @@
 package comp1110.mse;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * COMP1110 Mid-Semester Exam, Question 4
@@ -28,13 +29,13 @@ public class Q4Cypher {
      * @return True if the input string is well-formed
      */
     static boolean isWellFormed(String input) {
-        if (input.equals("")|| input == null){
+        if (input.equals("")){
             return false;
         } else if (input.charAt(0)==' ' || input.charAt(input.length()-1)==' '){
             return false;
         } else {
             for (char c:input.toCharArray()){
-                if (Character.getNumericValue(c)<32 ||Character.getNumericValue(c)>90){
+                if (Character.getNumericValue(c)<32 || Character.getNumericValue(c)>90){
                     return false;
                 }
             }
@@ -70,14 +71,23 @@ public class Q4Cypher {
 //        return input;
         ArrayList<Character> result = new ArrayList<>();
         char[] result1 = new char[input.length()];
+
+        int index = this.key;
+
         for (int i =0;i<input.length();i++){
 //            result.add(Character.getNumericValue(c)+key)
-            result1[i] =(char) (Character.getNumericValue(input.charAt(i))+key);
+//            result1[i] =(char) (   ((int)input.charAt(i)+index)%(90)+31    );
+            if (((int)input.charAt(i)+index)>90){
+                result1[i] =(char) (   ((int)input.charAt(i)+index) -90+31  );
+            } else {
+                result1[i] =(char) (   ((int)input.charAt(i)+index)   );
 
-
+            }
+            index++;
         }
 
-        return result1.toString();
+        return String.copyValueOf(result1);
+
     }
 
     /*
