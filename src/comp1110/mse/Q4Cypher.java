@@ -1,9 +1,13 @@
 package comp1110.mse;
 
+import java.util.ArrayList;
+
 /**
  * COMP1110 Mid-Semester Exam, Question 4
  */
 public class Q4Cypher {
+
+    int key;
 
     /**
      * Constructor for a cypher instance
@@ -11,6 +15,7 @@ public class Q4Cypher {
      */
     Q4Cypher(int key) {
         // FIXME Question 4b: complete this constructor
+        this.key = key;
     }
 
     /**
@@ -23,7 +28,21 @@ public class Q4Cypher {
      * @return True if the input string is well-formed
      */
     static boolean isWellFormed(String input) {
-        return false; // FIXME Question 4a: complete this function
+        if (input.equals("")|| input == null){
+            return false;
+        } else if (input.charAt(0)==' ' || input.charAt(input.length()-1)==' '){
+            return false;
+        } else {
+            for (char c:input.toCharArray()){
+                if (Character.getNumericValue(c)<32 ||Character.getNumericValue(c)>90){
+                    return false;
+                }
+            }
+            return true;
+
+        }
+
+//        return false; // FIXME Question 4a: complete this function
     }
 
     /**
@@ -48,7 +67,17 @@ public class Q4Cypher {
      */
     String encode(String input) {
         // FIXME Question 4c: complete this function
-        return input;
+//        return input;
+        ArrayList<Character> result = new ArrayList<>();
+        char[] result1 = new char[input.length()];
+        for (int i =0;i<input.length();i++){
+//            result.add(Character.getNumericValue(c)+key)
+            result1[i] =(char) (Character.getNumericValue(input.charAt(i))+key);
+
+
+        }
+
+        return result1.toString();
     }
 
     /*

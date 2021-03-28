@@ -21,6 +21,34 @@ public class Q2Interleave {
      *        {"a", "e", "b", "c"}
      */
     public static String[] interleave(String[] a, String[] b) {
-        return null;  // FIXME Question 2: complete this function
+        String[] result = new String[a.length+b.length];
+        if (a.length==b.length){
+            for (int i = 0,j=0;i<a.length && j<a.length;i++,j=j+2){
+                result[j]=a[i];
+                result[j+1] = b[i];
+            }
+            return result;
+
+        } else if (a.length>b.length){
+            for (int i = 0,j=0;i<b.length && j<b.length;i++,j=j+2){
+                result[j]=a[i];
+                result[j+1] = b[i];
+            }
+            for (int k=b.length +b.length;k<a.length;k++){
+                result[k] = a[k];
+            }
+            return result;
+        } else {
+            for (int i = 0,j=0;i<a.length && j<a.length;i++,j=j+2){
+                result[j]=a[i];
+                result[j+1] = b[i];
+            }
+            for (int k=a.length +a.length;k<b.length;k++){
+                result[k] = b[k];
+            }
+            return result;
+        }
+
+//        return null;  // FIXME Question 2: complete this function
     }
 }

@@ -5,6 +5,9 @@ package comp1110.mse;
  */
 public class Q3Plane {
 
+    public String name;
+    public int speed;
+
     /**
      * Constructor
      *
@@ -12,12 +15,16 @@ public class Q3Plane {
      * @param speed The speed of the plane (in km/h),
      */
     Q3Plane(String name, int speed) {
+        this.name = name;
+        this.speed = speed;
         // FIXME 3a: complete this constructor
     }
 
     /** Return the speed of the plane */
     int getSpeed() {
-        return 0; // FIXME 3b: complete this method
+        return this.speed;
+
+//        return 0; // FIXME 3b: complete this method
     }
 
     /**
@@ -25,6 +32,7 @@ public class Q3Plane {
      * @param speed The new speed of the plane
      */
     void resetSpeed(int speed) {
+        this.speed = speed;
         // FIXME 3c: complete this method
     }
 
@@ -34,7 +42,11 @@ public class Q3Plane {
      * @return The time to travel the distance (in minutes)
      */
     int timeToTravel(int distance) {
-        return 0; // FIXME 3f: complete this method
+        double time = ((double) distance/(double)this.speed)*60;
+        int final1 = (int) time;
+        return final1;
+
+//        return 0; // FIXME 3f: complete this method
     }
 
     /**
@@ -48,6 +60,8 @@ public class Q3Plane {
      */
     @Override
     public String toString() {
-        return "";  // FIXME 3g: complete this method
+        return "Plane "+ this.name + " is travelling "+ this.speed + " km/h";
+
+//        return "";  // FIXME 3g: complete this method
     }
 }
