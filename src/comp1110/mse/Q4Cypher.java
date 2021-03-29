@@ -75,15 +75,16 @@ public class Q4Cypher {
         int index = this.key;
 
         for (int i =0;i<input.length();i++){
-//            result.add(Character.getNumericValue(c)+key)
-//            result1[i] =(char) (   ((int)input.charAt(i)+index)%(90)+31    );
+
             if (((int)input.charAt(i)+index)>90){
-                result1[i] =(char) (   ((int)input.charAt(i)+index) -90+31  );
+                result1[i] =(char) (   (int)input.charAt(i)+index -90+31  );
+                index++;
+
             } else {
                 result1[i] =(char) (   ((int)input.charAt(i)+index)   );
+                index++;
 
             }
-            index++;
         }
 
         return String.copyValueOf(result1);
