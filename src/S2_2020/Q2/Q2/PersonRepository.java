@@ -13,6 +13,7 @@ public class PersonRepository {
             throw new RuntimeException("Person instance must have null id");
         }
         person.setId(sequenceGenerator.nextVal());
+        System.out.println(person.getId());
         personMap.put(person.getId(), person);
         return person;
     }

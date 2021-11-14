@@ -23,6 +23,25 @@ public class PersonRepositoryTest {
 
     // ########## YOUR CODE STARTS HERE ##########
 
+    @Test(expected = RuntimeException.class)
+    public void testException() {
+        Person person = new Person(" ",1,"policeman1",true,false);
+        person.setId(1);
+        personRepository.save(person);
+
+    }
+
+    @Test(timeout=1000)
+    public void test() {
+        Person person = new Person("1 ",1,"policeman1",true,false);
+        personRepository.save(person);
+
+
+        assertEquals(Integer.valueOf(1), person.getId());
+        assertEquals(person,personRepository.findById(Integer.valueOf(1)));
+
+    }
+
     // ########## YOUR CODE ENDS HERE ##########
 
 
